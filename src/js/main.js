@@ -210,3 +210,42 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+// We send the detail to developer
+const fullname = document.getElementById("name");
+const email = document.getElementById("email");
+const phonenumber = document.getElementById("phonenumber");
+const subject = document.getElementById("subject");
+const description = document.getElementById("description");
+function sendmessage(){
+    if(fullname.value !="" && email.value !="" && phonenumber.value !="" && subject.value !="" && description.value !=""){
+      sendEmail();
+    }
+    else{
+      alert("Please fill all mandatory field's!");
+    }
+}
+function sendEmail(){
+  const bodyMessage=`
+  Full Name: ${fullname.value}<br> Email: ${email.value}<br> Phone Number : ${phonenumber.value} <br>
+  Description: ${description.value}<br>`;
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "naveen.vgsl@gmail.com",
+    Password : "E99A6BAAE4696F3FE363836E59D6B7EF42A3",
+    To : 'naveenkumar21195@gmail.com',
+    From : "naveen.vgsl@gmail.com",
+    Subject : subject.value,
+    Body : bodyMessage
+}).then(
+  message => {
+    if(message=="OK"){
+      document.getElementById("contactform").reset();
+      Swal.fire({
+        title: "Success!",
+        text: "Message send successfully!",
+        icon: "success"
+      });
+    }
+  }
+);
+}

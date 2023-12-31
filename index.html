@@ -687,34 +687,41 @@
                     </div>
                 </div>
 
-                <form action="" class="contact__form grid">
+                <form id="contactform" class="contact__form grid">
                     <div class="contact__inputs grid">
                         <div class="contact__content">
                             <label for="" class="contact__label">Name</label>
-                            <input type="text" class="contact__input">
+                            <input type="text" class="contact__input" id="name" autocomplete="off">
+                            
                         </div>
 
                         <div class="contact__content">
                             <label for="" class="contact__label">E-mail</label>
-                            <input type="email" class="contact__input">
+                            <input type="email" class="contact__input" id="email" autocomplete="off">
+                         
                         </div>
                     </div>
-
+                    <div class="contact__content">
+                        <label for="" class="contact__label">Mobile No</label>
+                        <input type="number" class="contact__input" id="phonenumber" autocomplete="off">
+                       
+                    </div>
                     <div class="contact__content">
                         <label for="" class="contact__label">Subject</label>
-                        <input type="text" class="contact__input">
+                        <input type="text" class="contact__input" id="subject" autocomplete="off">
+                       
                     </div>
 
                     <div class="contact__content">
                         <label for="" class="contact__label">Description</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        <textarea name="" id="description" cols="0" rows="7" class="contact__input" autocomplete="off"></textarea>
+                       
                     </div>
-
                     <div>
-                        <a href="#" class="button button--flex">
+                        <button  onclick="sendmessage()" id="submit" class="button button--flex">
                             Send message
                             <i class="uil uil-message button__icon"></i>
-                        </a>
+                        </button>
                     </div>
                 </form>
             </div>
@@ -771,6 +778,12 @@
 
     <!--==================== MAIN JS ====================-->
     <script src="./src/js/main.js"></script>
+
+ <!--==================== Mail JS ====================-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+ <!--==================== Alert ====================-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
