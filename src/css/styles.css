@@ -971,7 +971,7 @@ img {
 .footer__copy {
   font-size: var(--smaller-font-size);
   text-align: center;
-  color: var(--text-color-light);
+  color: var(--text-color-dark);
   margin-top: var(--mb-3);
 }
 
@@ -1276,6 +1276,7 @@ img {
     }
     .footer__copy {
       margin-top: 4.5rem;
+      color: #fff;
     }
   }
 }
