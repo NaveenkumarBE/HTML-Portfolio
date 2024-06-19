@@ -529,33 +529,37 @@ img {
 }
 
 .skills__wordpress {
-  width: 70%;
-}
-
-.skills__python {
-  width: 60%;
-}
-
-.skills__tab {
-  width: 70%;
-}
-
-.skills__sql {
   width: 50%;
 }
 
-.skills__google {
-  width: 70%;
+.skills__csharp {
+  width: 90%;
+}
+.skills__netcore{
+  width: 80%;
+}
+.skills__angular {
+  width: 80%;
+}
+
+.skills__sql {
+  width: 80%;
+}
+
+.skills__webapi {
+  width: 90%;
 }
 
 .skills__bank {
   width: 80%;
 }
 
-.skills__google {
+.skills__microservice {
   width: 70%;
 }
-
+.skills__react{
+  width: 70%;
+}
 .skills__counter {
   width: 80%;
 }
